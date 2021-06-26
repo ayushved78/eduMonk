@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eduMonk | HOME</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+	<script type="text/javascript" src="js/home.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <header id="header">
+        <nav>
+			<div><label for="eduMonk" class="logo">eduMonk.com</label></div>
+			<ul>
+				<li><a class="active" href="">Home</a></li>
+				<li><a href="#portfolio_section">Portfolio</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+                <li><a href="feedback.html">FeedBack</a></li>
+			</ul>
+			<a class="get-started" href="log.html">Re-Log</a>
+			<img src="img/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+		</nav>
+        <div class="head-container">
+			<div class="quote">
+				<p>The beautiful thing about learning is that nobody can take it away from you</p>
+				<h5>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research!</h5>				
+			</div>
+			<div class="svg-image">
+				<img src="img/svg1.jpg" alt="svg">
+			</div>
+		</div>
+        <div class="side-menu" id="side-menu">
+			<div class="close" onclick="sideMenu(1)"><img src="img/close.png" alt=""></div>			
+			<ul>
+				<li><a href="#about_section">About</a></li>
+				<li><a href="feedback.html">Portfolio</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+			</ul>
+		</div>
+    </header>
+
+    <div class="title">
+		<span>Popular Subjects on LearnEd</span>
+	</div>
+	<br><br>
+	<div class="course">
+		<center><div class="cbox">
+		<div class="det"><a href="#"><img src="img/courses/book.png">JEE Preparation</a></div>
+		<div class="det"><a href="#"><img src="img/courses/d1.png">GATE Preparation</a></div>
+		<div class="det"><a href="#"><img src="img/courses/paper.png">Sample Papers</a></div>
+		<div class="det"><a href="subjects/quiz.html"><img src="img/courses/d1.png">Daily Quiz</a></div>
+		</div></center>
+		<div class="cbox">
+		<div class="det"><a href="#"><img src="img/courses/computer.png">Computer Courses</a></div>
+		<div class="det"><a href="#"><img src="img/courses/data.png">Data Structures</a></div>
+		<div class="det"><a href="#"><img src="img/courses/algo.png">Algorithm</a></div>
+		<div class="det det-last"><a href="#"><img src="img/courses/projects.png">Projects</a></div>
+		</div>
+	</div>
+
+    <div class="diffSection" id="about_section">
+		<center><p style="font-size: 50px; padding: 100px">About</p></center>
+		<div class="about-content">
+				<div class="side-image">
+					<img class="sideImage" src="img/e3.jpg">
+				</div>
+				<div class="side-text">
+					<h2>What you think about us ?</h2>
+					<p>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research.<br> Educational website can include websites that have games, videos or topic related resources that act as tools to enhance learning and supplement classroom teaching. These websites help make the process of learning entertaining and attractive to the student, especially in today's age. <br>Using HTML(HyperText Markup Language), CSS(Cascading Style Sheet), JavaScript, we can make learning more easier and in a interesting way.</p>
+				</div>
+		</div>
+	</div>
+
+    <div class="service-swipe">
+		<div class="diffSection" id="services_section">
+		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p></center>
+		</div>
+		<a href="#"><div class="s-card"><img src="images/icon/computer-courses.png"><p>Free Online Computer Courses</p></div></a>
+		<a href="#"><div class="s-card"><img src="images/icon/brainbooster.png"><p>Building Concepts for Competitive Exams</p></div></a>
+		<a href="#"><div class="s-card"><img src="images/icon/online-tutorials.png"><p>Online Video Lectures</p></div></a>
+		<a href="#"><div class="s-card"><img src="images/icon/papers.jpg"><p>Sample Papers of Various Competitive Exams</p></div></a>
+		<a href="#"><div class="s-card"><img src="images/icon/p3.png"><p>Performance and Ranking Report</p></div></a>
+		<a href="#contactus_section"><div class="s-card"><img src="images/icon/discussion.png"><p>Discussion with Our Tutors & Mentors</p></div></a>
+		<a href="subjects/quiz.html"><div class="s-card"><img src="images/icon/q1.png"><p>Daily Brain Teasing Questions to Improve IQ</p></div></a>
+		<a href="#contactus_section"><div class="s-card"><img src="images/icon/help.png"><p>24x7 Online Support</p></div></a>
+	</div>
+
+    <div class="diffSection" id="contactus_section">
+		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<div class="csec"></div>
+		<div class="back-contact">
+			<div class="cc">
+			<form  method="post" id="contact_form" name="contact_form" enctype="text/plain">
+				<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
+				<center>
+				<input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
+				</center>
+				<label>Email <span class="imp">*</span></label><br>
+				<input type="email" name="mail" style="width: 100%" required="required"><br>
+				<label>Number <span class="imp">*</span></label><br>
+				<input type="text" name="mail" style="width: 100%" required="required" pattern="[6-9]{1}[0-9]{9}"><br>
+				<label>Message <span class="imp">*</span></label><br>
+				<input type="text" name="message" style="width: 100%" required="required"><br>
+				<label>Additional Details</label><br>
+				<textarea name="addtional"></textarea><br>
+				<button type="submit" id="csubmit">Send Message</button>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		jQuery('#contact_form').on('submit',function(e) {
+			jQuery.ajax({
+				url: 'php/submit.php',
+				type: 'post',
+				data: jQuery('#contact_form').serialize(),
+				success: function(result){
+					alert(result);
+				}
+			});
+			e.preventDefault();
+		});
+	</script>
+    <marquee style="background: linear-gradient(to right, #FA4B37, #FF7600); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”</div></marquee>
+
+    <footer id="footer">
+        <p>© Copyright 2021 eduMonk</p>    
+    </footer>
+</body>
+</html>
