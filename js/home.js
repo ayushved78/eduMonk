@@ -15,8 +15,6 @@ function scrollAppear() {
   }
   
   window.addEventListener('scroll', scrollAppear);
-  
-  // For switching between navigation menus in mobile mode
   var i = 2;
   function switchTAB() {
       var x = document.getElementById("list-switch");
@@ -29,8 +27,6 @@ function scrollAppear() {
       }
       i++;
   }
-  
-  // For LOGIN
   var x = document.getElementById("login");
   var y = document.getElementById("register");
   var z = document.getElementById("btn");
@@ -55,8 +51,6 @@ function scrollAppear() {
     a.style.color = "#fff";
     b.style.color = "#000";
   }
-    
-  // CheckBox Function
   function goFurther(){
     if (document.getElementById("chkAgree").checked == true) {
       document.getElementById('btnSubmit').style = 'background: linear-gradient(to right, #FA4B37, #FF7600);';
@@ -69,8 +63,6 @@ function scrollAppear() {
   function google() {
         window.location.assign("https://accounts.google.com/signin/v2/identifier?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue&csig=AF-SEnbZHbi77CbAiuHE%3A1585466693&flowName=GlifWebSignIn&flowEntry=AddSession", "_blank");
   }
-  
-  // QUIZ Page
   function quizt(frame) {
     document.getElementById('f1').style='display: none;';
     document.getElementById('f2').style='display: none;';

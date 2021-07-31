@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function showHint(str) {
+          if (str.length == 0) {
+            document.getElementById("txtHint").innerHTML = "";
+            return;
+          } else {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+              }
+            };
+            xmlhttp.open("GET", "gethint.php?q=" + str, true);
+            xmlhttp.send();
+          }
+        }
+        </script>
+</head>
+<body>
+    <center>
+    <form action="">
+    <label for="fname">Book/Author Name:</label>
+    <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
+    </form>
+    </center>
+    <p><strong>Suggestions:</strong> <span id="txtHint"></span></p>
+    <center><h1>Books</h1></center>
+    <div id='content'>
+        <table id='books' cellpadding='10px' style="text-align:left;">
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>                
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let xmlContent = '';
+        let tableBooks = document.getElementById('books');
+        fetch('page.xml').then((response)=> {
+            response.text().then((xml)=>{
+                xmlContent = xml;
+
+                let parser = new DOMParser();
+                let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+                let books = xmlDOM.querySelectorAll('book');
+
+                books.forEach(bookXmlNode => {
+
+                    let row = document.createElement('tr');
+
+                    //author
+                    let td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[0].innerHTML;
+                    row.appendChild(td);
+
+                    //  title
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[1].innerHTML;
+                    row.appendChild(td);
+                    
+                    //price
+                    td = document.createElement('td');
+                    td.innerText = '$ ' + bookXmlNode.children[3].innerHTML;
+                    row.appendChild(td);
+
+                    //description
+                    td = document.createElement('td');
+                    td.innerText = bookXmlNode.children[5].innerHTML;
+                    row.appendChild(td);
+
+                    tableBooks.children[1].appendChild(row);
+                    
+                });
+                
+            });
+        });    
+    </script>
+</body>
+</html>

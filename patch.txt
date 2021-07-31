@@ -1,0 +1,14 @@
+HTML
+CSS
+JS
+
+JSP
+Servlet
+Cookies
+Session
+
+DB
+
+PHP
+AJAX
+XML
